@@ -51,3 +51,19 @@ def switch_case(element_type):
     }
     return switcher.get(element_type.lower(), None)
 
+def switch_menu(menu):
+    if menu == "RAWAT JALAN":
+        driver.find_element(switch_case("id"), "headlessui-disclosure-button-1").click()
+    elif menu == "REKAM MEDIS":
+        driver.find_element(switch_case("id"), "headlessui-disclosure-button-17").click()
+
+def switch_sub_menu(menu, saveWord, saveImage):
+    if menu == "SEMUA STATUS":
+        driver.find_element(switch_case("id"), "rawat-jalan_semua-status_menu_click").click()
+        wait(5)
+        call_screenshoot(saveWord,saveImage,"Membuka Sub Menu Semua Status")
+    elif menu == "RESERVASI":
+        driver.find_element(switch_case("id"), "rawat-jalan_reservasi_menu_click").click()
+        wait(5)
+        call_screenshoot(saveWord,saveImage,"Membuka Sub Menu Reservasi")
+    

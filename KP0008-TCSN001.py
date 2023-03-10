@@ -1,5 +1,6 @@
 from function_klinik import *
 from global_function import *
+from selenium.webdriver.common.keys import Keys
 
 saveImage = []
 saveWord = []
@@ -14,7 +15,7 @@ login = form_login(username,password,saveWord,saveImage)
 wait(5)
 switch_menu("RAWAT JALAN")
 wait(5)
-switch_sub_menu("SEMUA STATUS", saveWord, saveImage)
+switch_sub_menu("RESERVASI", saveWord, saveImage)
 
 
-end(saveImage,saveWord,'KP0002-TCSN001')
+end(saveImage,saveWord,'KP0008-TCSN001')
