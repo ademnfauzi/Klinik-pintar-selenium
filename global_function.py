@@ -32,11 +32,15 @@ def open_browser(url):
 def convert_pdf(images,word,namePDF):
     pdf = FPDF()
 
-    # Register a font with Unicode support
-    pdf.set_font('Times', '', 12)
-
-
+    pdf.add_page()
+    pdf.image('image/klinik pintar.png', x=60, y=30, w=80, h=50)
+    pdf.set_font('Times', 'B', 36)
+    pdf.cell(0, 180, 'Automation Testing', 0, 1, 'C')
+    pdf.set_font('Times', '',18)
+    pdf.cell(0, -130, 'By Ade Muhammad Nur Fauzi', 0, 1, 'C')
     for i in range(len(images)):
+         # Register a font with Unicode support
+        pdf.set_font('Times', '', 12)
         # Add a new page to the document
         pdf.add_page()
         # Load the PNG image into the PDF document
